@@ -1,0 +1,78 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main() {
+    char nombre[20];
+     char contrasena[50];
+    int intentos = 3;
+    char grado_grupo[5];
+    int numero_lista;
+    float preciounitario;
+    float importetotal = 0;
+    int opcion,cantidad,cm;
+
+    do {
+      cout<<"cual es tu nombre \n";
+         cin>>nombre;
+         cout<<"Introduce tu grupo y tu numero de lista: ";
+        cin>>contrasena;
+
+        if (strcmp(nombre, "leonardo") == 0 || strcmp(contrasena, "2b19") == 0)
+        { 
+          cout<<"acceso permitido\n";
+           break;
+        } else {
+            cout<<"acesso negado \n";
+        }
+    } while (intentos > 0);
+   if(intentos == 0) {
+        cout<<"Se ha superado el numero de intentos permitido.\n";
+        return 0;
+    }
+
+ do {
+        cout<<"\nIngrese la cantidad de unidades vendidas 0 para terminar: ";
+        cin>>cantidad;
+
+        if(cantidad == 0) {
+            break;
+        }
+
+        cout<<"Ingrese el precio unitario del artículo: ";
+        cin>>preciounitario;
+
+        if(cantidad < 0 || preciounitario < 0) {
+            cout<<"La cantidad y el precio unitario deben ser numeros positivos.\n";
+            continue;
+        }
+
+        importetotal += cantidad * preciounitario;
+    } while(1);
+
+    cout<<"\nEl importe total de la factura es: "<< importetotal<<endl;
+   do{
+        cout<<"otra cuenta si si  ingresa 0";
+        cin>>cm;
+    
+        if(cm>0){
+        break;
+        }else(cm=0);{
+             cout<<"Ingrese el precio unitario del artículo: ";
+        cin>>preciounitario;
+        cout<<"cuantos son";
+        cin>>cantidad;
+
+        if(cantidad < 0 || preciounitario < 0) {
+            cout<<"La cantidad y el precio unitario deben ser numeros positivos.\n";
+            continue;
+        }
+
+        importetotal += cantidad * preciounitario;
+        cout<<"el total de las cuentas es de "<<importetotal;
+        
+        }
+        
+    }while(cm=0);
+
+    return 0;
+}
