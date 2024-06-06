@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int opcion,lado,base,arear,basem,altura;
+cout<<"calcula el area de rectangulo 1)";
+cout<<"calcula el area de un trapecio 2)";
+cout<<"calcula el area de un triangulo 3)";
+   cin>>opcion;
+   switch(opcion){
+       case 1:
+    cout<<"ingrese el lado \n ";
+    cin>>lado;
+    cout<<"ingrese la base \n";
+    cin>>base;
+    arear=lado*base;
+    cout<<"la area es"<<arear;
+    break;
+    case 2:
+     cout<<"ingrese la altura";
+    cin>>altura;
+    cout<<"ingrese la base menor \n";
+    cin>>base;
+    cout<<"ingrese la base mayor \n";
+    cin>>basem;
+    arear=basem+base*altura/2;
+    cout<<"la area es "<<arear;
+    break;
+    case 3:
+     cout<<"ingrese la altura\n";
+    cin>>altura;
+    cout<<"ingrese la base \n";
+    cin>>base;
+    arear=altura*base/2;
+    cout<<"la area es"<<arear;
+    break;
+   }
+   return 0 ;
+   }
