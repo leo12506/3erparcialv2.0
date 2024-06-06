@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int numcart;
+    cout<<"ingrese el numero de una carta española \n";
+    cin>>numcart;
+    switch(numcart){
+        case 1:
+    cout<<"As";
+    break;
+    case 10:
+    cout<<"sota";
+    break;
+    case 11:
+    cout<<"caballo";
+    break;
+    case 12:
+    cout<<"rey";
+    break;
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+    cout<<"esta carta no es ninguna figura ni un as";
+    break;
+    default:
+    cout<<"esta carta no pertenece a la baraja española";
+    break;
+    }
+   return 0;
+}
