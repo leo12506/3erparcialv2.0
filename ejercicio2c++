@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, menor,mayor; 
+
+   cout<<"Ingrese 5 numeros enteros:\n";
+    cin>>num;
+    menor = num;
+    int igual=num;
+
+    for (int i = 1; i < 5; i++) {
+        cin>>num;
+
+        if (num < menor) {
+            menor = num;
+        }
+        else(num>menor);{
+            mayor=num;
+        }
+        if(num==igual){
+            num=igual;
+        }
+    }
+
+    cout<<"El numero menor es:"<< menor<<endl;
+    cout<<"El numero mayor es "<<mayor;
+     cout<<"El numero igual es "<<igual;
+    return 0;
+}
