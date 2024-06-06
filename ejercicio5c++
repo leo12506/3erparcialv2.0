@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main(){
+
+int horas;
+float sueldo,extra, extra2,sueldof,sueldov;
+	cout<<"Escriba su sueldo adquirido:";
+	cin>>sueldo;
+	cout<<"Escriba sus horas trabajadas:";
+	cin>>horas;
+	if (horas<40){
+	    sueldof=horas*sueldo;
+		cout<<"Su sueldo es de: "<<sueldof;
+	}
+	else if (horas>40 && horas<79){
+		extra=sueldo*1.5;
+		sueldov=sueldo+extra;
+		cout<<"Su sueldo es de: \n"<<sueldov;
+	}
+	if(horas>79){
+		extra2=sueldo*2;
+		sueldo=sueldo+extra2;
+		cout<<"Su sueldo es de: \n"<<extra2;
+	}
+}
