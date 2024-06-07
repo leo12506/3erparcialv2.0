@@ -1,0 +1,13 @@
+#include<iostream>
+#include <cmath>
+using namespace std;
+int main(){ 
+int num,potencia,resul;
+cout<<"ingresa el numero \n";
+cin>>num;
+cout<<"ingresa la potencia \n";
+cin>>potencia;
+resul=pow(num,potencia);
+cout<<"el resultado es"<<resul;
+return 0;
+}
