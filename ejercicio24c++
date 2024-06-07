@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main(){ 
+int num,potencia,rel=1;
+cout<<"ingresa el numero \n";
+cin>>num;
+cout<<"ingresa la potencia \n";
+cin>>potencia;
+for(int i=1 ; i<=potencia ; i++){
+	rel*=num;
+}
+cout<<"la potencia es: "<<rel;
+return 0;
+}
