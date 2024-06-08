@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main() {
+    char nombre[20];
+     char contrasena[50];
+    int intentos = 3;
+    char grado_grupo[5];
+    int numero_lista;
+
+    do {
+       cout<<"cual es tu nombre \n";
+         cin>>nombre;
+         cout<<"Introduce tu contraseña=numero de lista y grupo ";
+        cin>>contrasena;
+        intentos--;
+
+
+        if (strcmp(nombre, "leonardo") == 0 || strcmp(contrasena, "12b") == 0)
+        { 
+           cout<<"acceso permitido\n";
+           break;
+        } else {
+        cout<<"acesso negado\n";
+        }
+
+    } while (intentos > 0);
+   if(intentos == 0) {
+    cout<<"Se ha superado el numero de intentos permitido.\n";
+
+    }
+    return 0;
+
+}
