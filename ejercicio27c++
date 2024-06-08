@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+int main() {
+    char nombre[20];
+    int contraseña;
+    int errores=3;
+    int root=1234;
+
+    do {
+
+        cout<<"cual es tu contraseña \n";
+       cin>>contraseña;
+       cout<<"cual es tu nombre?\n";
+        cin>>nombre;
+
+        if (contraseña ==root){ 
+           cout<<"acceso permitido\n";
+           errores--;
+           break;
+        } else {
+            cout<<"acceso negado\n";
+        }
+
+    } while (errores>0);
+    if(errores=0){
+        cout<<"numero de intentos pasado\n";
+    }
+
+
+    return 0;
+}
