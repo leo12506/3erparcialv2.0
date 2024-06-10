@@ -1,0 +1,65 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int validarDatos(int cantidad, float preciounitario) {
+    if(cantidad < 0 || preciounitario < 0) {
+        cout<<"La cantidad y el precio unitario deben ser numeros positivos.";
+        return 0;
+    }
+    return 1;
+}
+
+int main() {
+    char nombre[50];
+    char contrasena[50];
+    int intentos = 3;
+    char gradogrupo[5];
+    int numerolista;
+    int cantidad;
+    float preciounitario;
+    float importetotal = 0;
+    int i;
+
+    while(intentos > 0) {
+        cout<<"Introduce tu nombre de usuario: ";
+        cin>>nombre;
+        cout<<"Introduce tu contraseña grado grupo o numero de lista: ";
+        cin>>contrasena;
+
+        if(strcmp(contrasena, "2bmpg") == 0 || strcmp(contrasena, "19") == 0) {
+            cout<<"Bienvenido al sistema.";
+            break;
+        } else {
+            cout<<"Nombre de usuario o contraseña incorrectos. Intentos restantes: "<<intentos - 1;
+            intentos--;
+        }
+    }
+
+    if(intentos == 0) {
+        cout<<"Se ha superado el número de intentos permitido. ";
+        return 0;
+    }
+
+    cout<<"\nIngrese la cantidad de unidades vendidas (0 para terminar): ";
+    for(i = 1; ; i++) {
+        scanf("%d", &cantidad);
+
+        if(cantidad == 0) {
+            break;
+        }
+
+        cout<<"Ingrese el precio unitario del artículo: ";
+        cin>>preciounitario;
+
+        if(!validarDatos(cantidad, preciounitario)) {
+            continue;
+        }
+
+        importetotal += cantidad * preciounitario;
+    }
+
+    cout<<"\nEl importe total de la factura es: "<<importetotal;
+
+    return 0;
+}
