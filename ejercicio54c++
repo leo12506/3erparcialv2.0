@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int calcularraiz(int n);
+int main(){
+    
+  int n;
+  float n2,n3;
+  cout<<"ingresa el numero natural ";
+  cin>>n;
+  cout<<"ingresa los dos numeros decimales"<<endl;
+  cin>>n2>>n3;
+  int resulr=calcularraiz(n);
+  cout<<"A)"<<resulr;
+  return 0;
+}
+int calcularraiz(int n){
+    int raiz=(n/n);
+    return raiz;
+}
