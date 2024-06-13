@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
 	int n;
-	cout<<"Digite el tamano del arreglo: ";
+	cout<<"Digite el numero de posiciones ";
 	cin>>n;
 	 int num[n];
 	for(int i=1;i<=n;i++){
