@@ -1,0 +1,18 @@
+include <iostream>
+using namespace std;
+int main()
+{
+	int n;
+	cout<<"Digite el tamano del arreglo: ";
+	cin>>n;
+	 int num[n];
+	for(int i=1;i<=n;i++){
+	cout<<"Digite un numero para la posicion \n"<<i<<":";
+	cin>>num[i];
+	}
+	
+	for(int i=1;i<=n;i++){
+       cout<<" El dato en la posicion "<<i<<" es: "<<num[i]<<endl;
+	}
+	return 0;
+}
