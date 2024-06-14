@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int p,numero,cont=0,cont1=0;
+    cout<<"Digite el nyumero de pocisiones (tamano)";
+    cin>>p;
+    int num[p];
+    for(int i=1;i<=p;i++){
+    cout<<"Digite el numero"<<i<<": ";
+        cin>>numero;
+        num[i]=numero;
+    }
+    for(int i=1;i<=p;i++){
+      cout<<"Los numeros ingresados son: "<<num[i]<<endl;
+      if(num[i]>0)
+      {
+          cont=cont+1;
+      }
+      else if (num[i]<0)
+      {
+          cont1=cont1+1;
+      }
+    }
+    cout<<"hay "<<cont<<" numeros positivos"<<endl;
+    cout<<"hay "<<cont1<<"numeros negativos";
+    return 0;
+}
