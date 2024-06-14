@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    string matriz[2][3];
+    matriz[0][0] = "oscar";
+    matriz[0][1] = "fernando";
+    matriz[1][0] = "74";
+    matriz[1][1] = "10";
+    matriz[1][2] = "56";
+
+    cout << "arreglo1" << endl;
+    for (int i = 0; i < 2; i++) {
+    cout << "La posicion [" << i << "] es: " << matriz[0][i] << endl;
+    
+    }
+
+    cout << "arreglo2" << endl;
+    for (int j = 0; j < 3; j++) {
+        cout << "La posicion [1][" << j << "] es: " << matriz[1][j] << endl;
+    }
+
+    return 0;
+}
