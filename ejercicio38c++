@@ -1,0 +1,27 @@
+#include<iostream>
+#include <cstdlib>
+using namespace std;
+int azar(int limite) {
+    return rand() % limite;
+}
+int num [10];
+int main (){
+int num [10];
+int limite=100;
+for(int i=1; i<10; i++){
+num[1]=azar(limite)+1;
+num[2]=azar(limite)+1;
+num[3]=azar(limite)+1;
+num[4]=azar(limite)+1;
+num[5]=azar(limite)+1;
+num[6]=azar(limite)+1;
+num[7]=azar(limite)+1;
+num[8]=azar(limite)+1;
+num[9]=azar(limite)+1;
+num[10]=azar(limite)+1;
+}
+for(int i=1; i<10; i++){
+cout<<"los números al azar son \t"<<num[i]<<"\n";
+}
+return 0;
+}
