@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int matriz[100][100];
+    int f,c,acum=0,dato;
+    cout<<"Escribe el numero de las filas ";
+    cin>>f;
+    cout<<"Escribe el numero de columnas";
+    cin>>c;
+    for(int i=0;i<f;i++){
+        for(int j=0;j<c;j++){
+            cout<<"digite dato ["<<i<<"]["<<j<<"]";
+            cin>>matriz[i][j];
+        }
+        acum=acum+matriz[i][1];
+    
+    }
+    for(int i=0;i<f;i++){
+        for(int j=0;j<c;j++){
+            cout<<matriz[i][j];
+        }
+        cout<<"\n";
+    }
+    cout<<"Todos los elemntos de la columna1,suman un total de:"<<acum;
+return 0;
+    
+}
