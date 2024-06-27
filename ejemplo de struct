@@ -1,0 +1,107 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+struct Calificacion {
+    int id;
+    string estudiante;
+    float nota;
+};
+
+vector<Calificacion> calificaciones;
+int id_actual = 1;
+
+void crearCalificacion() {
+    Calificacion nuevaCalificacion;
+    nuevaCalificacion.id = id_actual++;
+
+    cout << "Ingrese el nombre del estudiante: ";
+    cin >> nuevaCalificacion.estudiante;
+
+    cout << "Ingrese la nota del estudiante: ";
+    cin >> nuevaCalificacion.nota;
+
+    calificaciones.push_back(nuevaCalificacion);
+    cout << "Calificación añadida con éxito!" << endl;
+}
+
+void leerCalificaciones() {
+    cout << "Lista de calificaciones:" << endl;
+    for (const auto& calificacion : calificaciones) {
+        cout << "ID: " << calificacion.id
+             << ", Estudiante: " << calificacion.estudiante
+             << ", Nota: " << calificacion.nota << endl;
+    }
+}
+
+void actualizarCalificacion() {
+    int id;
+    cout << "Ingrese el ID de la calificación que desea actualizar: ";
+    cin >> id;
+
+    for (auto& calificacion : calificaciones) {
+        if (calificacion.id == id) {
+            cout << "Ingrese el nuevo nombre del estudiante: ";
+            cin >> calificacion.estudiante;
+
+            cout << "Ingrese la nueva nota del estudiante: ";
+            cin >> calificacion.nota;
+
+            cout << "Calificación actualizada con éxito!" << endl;
+            return;
+        }
+    }
+    cout << "Calificación con ID " << id << " no encontrada." << endl;
+}
+
+void borrarCalificacion() {
+    int id;
+    cout << "Ingrese el ID de la calificación que desea borrar: ";
+    cin >> id;
+
+    for (auto it = calificaciones.begin(); it != calificaciones.end(); ++it) {
+        if (it->id == id) {
+            calificaciones.erase(it);
+            cout << "Calificación borrada con éxito!" << endl;
+            return;
+        }
+    }
+    cout << "Calificación con ID " << id << " no encontrada." << endl;
+}
+
+int main() {
+    int opcion;
+    do {
+        cout << "Menu de Calificaciones" << endl;
+        cout << "1. Crear calificación" << endl;
+        cout << "2. Leer calificaciones" << endl;
+        cout << "3. Actualizar calificación" << endl;
+        cout << "4. Borrar calificación" << endl;
+        cout << "5. Salir" << endl;
+        cout << "Seleccione una opción: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1:
+                crearCalificacion();
+                break;
+            case 2:
+                leerCalificaciones();
+                break;
+            case 3:
+                actualizarCalificacion();
+                break;
+            case 4:
+                borrarCalificacion();
+                break;
+            case 5:
+                cout << "Saliendo..." << endl;
+                break;
+            default:
+                cout << "Opción no válida. Intente de nuevo." << endl;
+        }
+    } while (opcion != 5);
+
+    return 0;
+}
